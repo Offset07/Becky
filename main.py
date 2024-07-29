@@ -39,7 +39,7 @@ class Bot(BaseBot):
         print(f"{user.username} entrou na sala")   
         await self.highrise.chat(f"🏄‍♀️BIENVENUE🏄‍♀️ {user.username} 🏖A LA PLAGE🏖!.Pour les danses utilise de 1 à 95")
       
-        await self.highrise.send_emote("idle_singing")
+        await self.highrise.send_emote("dance-breakdance")
       
         await self.highrise.send_emote("idle_singing",user.id) 
       
@@ -1410,14 +1410,14 @@ class Bot(BaseBot):
         print(f"{user.username} whispered: {message}")
 
         if message.startswith("/fly"):
-          if user.username == "R0__Sa":
+          if user.username == "JOHANLIEBERT_0":
             await self.teleporter(message)
 
         if        message.startswith("/") or message.startswith("!"):
             await self.command_handler(user, message)
 
         if              message.startswith("gold") or       message.startswith("carteira"):
-          if user.username == "R0__Sa":
+          if user.username == "JOHANLIEBERT_0":
             wallet = (await self.highrise.get_wallet()).content
             await self.highrise.send_whisper(user.id,f"VALEUR TOTAL : {wallet[0].amount} {wallet[0].type}")
             await self.highrise.send_emote("emote-bunnyhop")
@@ -1431,4 +1431,4 @@ class Bot(BaseBot):
     async def on_user_leave(self, user: User) -> None:
         print(f"{user.username} saiu da sala")
         await self.highrise.chat(f"Au revoir @{user.username} j'espére que t'as bien profité🏄‍♀️")
-        await self.highrise.send_emote("dance-kawai")
+        await self.highrise.send_emote("dance-breakdance")
