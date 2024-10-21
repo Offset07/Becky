@@ -34,10 +34,10 @@ amour = ["Les gens t'aiment à 0%❤️","Les gens t'aiment à 20%❤️","Les g
 class Bot(BaseBot):
     async def on_start(self, session_metadata: SessionMetadata) -> None:
         print("funcionando")
-        await self.highrise.walk_to(Position(15.5 , 0.0 , 25.5 , "FrontRight"))
+        await self.highrise.walk_to(Position(16.5 , 0.0 , 29.5 , "FrontRight"))
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
         print(f"{user.username} entrou na sala")   
-        await self.highrise.chat(f"🏄‍♀️BIENVENUE🏄‍♀️ {user.username} 🏖A LA PLAGE🏖!.Pour les danses utilise de 1 à 95")
+        await self.highrise.chat(f"Bem vindo a uma sala REVOADA DO BRUXO 🔥✨ espero que você goste, espero que você respeite as pessoas em uma sala e os supervisores, e se você tiver um problema, fale com os supervisores.✌🏻🙌🏻 {user.username} use 1 and 95")
       
         await self.highrise.send_emote("dance-breakdance")
       
@@ -110,7 +110,7 @@ class Bot(BaseBot):
            await self.highrise.chat(frase)
           
         if message.startswith("/fly"):
-          if user.username == "ALIOUNE_":
+          if user.username == "Mini_sad":
             await self.teleporter(message)
 
         if        message.startswith("/") or message.startswith("!"):
@@ -1243,12 +1243,12 @@ class Bot(BaseBot):
           await                     self.teleport_to_user(user, target_username)
 
         if                            message.startswith("Summon") or          message.startswith("/summon") or  message.startswith("!summon"):
-          if user.username == "_THE_MAN_BECKY" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx":
+          if user.username == "Mini_sad" or user.username == "daniel_offset" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx":
            target_username = message.split("@")[-1].strip()
            await self.teleport_user_next_to(target_username, user)
     
         if message.startswith("kick"):
-          if user.username == "_THE_MAN_BECKY" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx":
+          if user.username == "Mini_sad" or user.username == "didyousaydonut" or user.username == "Demic._" or user.username == "Mini_sad" or user.username == "f__7oo" or user.username == "H.kakashi" or user.username == "Just_xx":
               pass
           else:
               await self.highrise.chat("Pas la permission.")
@@ -1410,7 +1410,7 @@ class Bot(BaseBot):
         print(f"{user.username} whispered: {message}")
 
         if message.startswith("/fly"):
-          if user.username == "JOHANLIEBERT_0":
+          if user.username == "daniel_offset":
             await self.teleporter(message)
 
         if        message.startswith("/") or message.startswith("!"):
