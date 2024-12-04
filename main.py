@@ -34,10 +34,10 @@ amour = ["Les gens t'aiment à 0%❤️","Les gens t'aiment à 20%❤️","Les g
 class Bot(BaseBot):
     async def on_start(self, session_metadata: SessionMetadata) -> None:
         print("funcionando")
-        await self.highrise.walk_to(Position(16.5 , 0.0 , 29.5 , "FrontRight"))
+        await self.highrise.walk_to(Position(16.0 , 0.0 , 14.0 , "FrontRight"))
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
         print(f"{user.username} entrou na sala")   
-        await self.highrise.chat(f"Bem vindo a uma sala REVOADA DO BRUXO 🔥✨ espero que você goste, espero que você respeite as pessoas em uma sala e os supervisores, e se você tiver um problema, fale com os supervisores.✌🏻🙌🏻 {user.username} use 1 and 95")
+        await self.highrise.chat(f"🔥hey @username bienvenue a la soirée tips passe un bon temps 🔥🩸🏴‍☠️‎‎‎ {user.username} use 1 and 95")
       
         await self.highrise.send_emote("dance-breakdance")
       
@@ -1430,5 +1430,5 @@ class Bot(BaseBot):
 
     async def on_user_leave(self, user: User) -> None:
         print(f"{user.username} saiu da sala")
-        await self.highrise.chat(f"Au revoir @{user.username} j'espére que t'as bien profité🏄‍♀️")
+        await self.highrise.chat(f"🔥🔥 @{user.username} 🔥🔥")
         await self.highrise.send_emote("dance-breakdance")
