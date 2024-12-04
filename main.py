@@ -37,7 +37,7 @@ class Bot(BaseBot):
         await self.highrise.walk_to(Position(16.0 , 0.0 , 14.0 , "FrontRight"))
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
         print(f"{user.username} entrou na sala")   
-        await self.highrise.chat(f"🔥hey @username bienvenue a la soirée tips passe un bon temps 🔥🩸🏴‍☠️‎‎‎ {user.username} use 1 and 95")
+        await self.highrise.chat(f"🔥hey bienvenue a la soirée tips passe un bon temps 🔥🩸🏴‍☠️‎‎‎ {user.username} use 1 and 95")
       
         await self.highrise.send_emote("dance-breakdance")
       
